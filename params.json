@@ -1,5 +1,5 @@
 {
-  "name": "Monkeyd.GitHub.io",
+  "name": "notes by monkeyd",
   "tagline": "",
   "body": "# Mac环境下部署stf\r\n1. 下载安装node\r\n2. 下载homebrew, ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"\r\n3. brew install graphicsmagick zeromq protobuf yasm pkg-config\r\n4. 下载rethinkdb, http://download.rethinkdb.com/osx\r\n5. 下载stf，sudo npm install -g stf，可能会失败，推荐用淘宝镜像\r\n6. npm install -g cnpm --registry=https://registry.npm.taobao.org，然后 cnpm install -g stf\r\n7. 通过stf doctor检查需要的环境安装情况，可能会提升protobuf3.x版本不支持，通过brew重新安装2.6.1\r\n8. brew unlink protobuf, brew install protobuf260\r\n9. 运行rethinkdb,指定端口和缓冲大小启动：rethinkdb --bind all --cache-size 8192 --http-port 8090\r\n10. 启动stf，stf local 或者 stf local --public-ip xx.xx.xx.xx --allow-remote\r\n11. 本地在http://localhost:7100访问\r\n12. adb服务需下载jdk和sdk",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
